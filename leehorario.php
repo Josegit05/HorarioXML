@@ -1,45 +1,110 @@
 <?php
 $datos = simplexml_load_file("horario.xml");
 
+foreach($datos as $dia=>$valor){
+    echo "<table style='display: inline'>";
+    echo "<tr style='border-collapse:collapse; border: 1px solid black;background-color:rgb(28, 255, 228)'>";
+    echo "<th colspan='3' style='border-collapse:collapse; border: 1px solid black'>{$dia}</th>";
+    
+    foreach($valor as $hora=>$valor2){
+       foreach($valor2 as $modulo=>$valor3){
+        echo "<tr style='border-collapse:collapse; border: 1px solid black'>";
+        echo "<td style='border-collapse:collapse; border: 1px solid black;text-align: center;'>{$hora}</td>";
+        echo "<td style='border-collapse:collapse; border: 1px solid black;text-align: center;'>{$valor3}</td>";
+        
+        echo "</tr>";
+        }
+    }
+    echo "</tr>";
+    echo "</table>";
+}
 
+$horaactual=date("G");
+    $minutosactuales=date("i");
+    $diaactual=date("l");
+    function dos($dia,$hora,$minutos){
+      global $datos;
+      global $diaactual;
+      global $minutosactuales;
+        switch ($diaactual) {
+          case "Monday":
+              $diaEspanol  = "lunes";
+              break;
+          case "Tuesday":
+              $diaEspanol  = "martes";
+              break;
+          case "Wednesday":
+              $diaEspanol  = "miercoles";
+              break;
+          case "Thursday":
+              $diaEspanol  = "jueves";
+              break;
+          case "Friday":
+              $diaEspanol  = "viernes";
+              break;
+          case "Saturday":
+              $diaEspanol  = "sabado";
+              break;
+          case "Sunday":
+              $diaEspanol  = "Domingo";
+              break;
+      }
+  
+      
+  
+        foreach($datos as $dia=>$valor){
+  
+          if ($diaEspanol == $dia){ 
+            
+            foreach($valor as $hora=>$valor2){
+                foreach($valor2 as $modulo=>$valor3){
+                if ($hora == 8 and $minutosactuales>=0 and $minutos <=55){
+                    $hora = 'Primera-Hora';
+                    $QUEHORA='Primera-Hora';
+                    }
+                    elseif($hora == 8 and $minutos > 55 or $hora == 9 and $minutos <= 50){
+                        $hora = 'Segunda-Hora';
+                      $QUEHORA='Segunda-Hora';
+                    }
+                    elseif($hora == 9 and $minutos > 50 or $hora == 10 and $minutos <= 45){
+                        $hora = 'Tercera-Hora';
+                      $QUEHORA='Tercera-Hora';
+                    }
+                    elseif($hora == 11 and $minutos > 15 or $hora == 12 and $minutos <= 10){
+                        $hora = 'Cuarta-Hora';
+                      $QUEHORA='Cuarta-Hora';
+                    }
+                    elseif($hora == 12 and $minutos > 10 or $hora == 13 and $minutos <= 05){
+                        $hora = 'Quinta-Hora';
+                      $QUEHORA='Quinta-Hora';
+                    }
+                    elseif($hora == 13 and $minutos > 05 or $hora == 13 and $minutos <= 50){
+                      $QUEHORA='Sexta-Hora';
+                    }
+                    elseif($hora == 10 and $minutos > 45 or $hora == 11 and $minutos <= 15){
+                      $QUEHORA='RECREO';
+                    }
+                    else{
+                      $QUEHORA=8;
+                    }
+              if($hora==$QUEHORA){
+                $horaguardada=$hora;
+                $diaguardado=$dia;
+              }
+            }
+            }
+          } 
+        }
+        if($QUEHORA==8){
+          echo "No estamos en clase.";
+        }
+        elseif($QUEHORA=='RECREO'){
+          echo "Estamos en el recreo";
+        }
+        else{ 
+          echo "Ahora toca {$diaguardado->$horaguardada->$valor3}.";
+        }
+    }
 
-echo "<br> El lunes a primera hora se imparte {$datos->lunes->clase[0]->modulo}. La imparte {$datos->lunes->clase[0]->profe}.";
-echo "<br> El lunes a segunda hora se imparte {$datos->lunes->clase[1]->modulo}. La imparte {$datos->lunes->clase[1]->profe}.";
-echo "<br> El lunes a tercera hora se imparte {$datos->lunes->clase[2]->modulo}. La imparte {$datos->lunes->clase[2]->profe}.";
-echo "<br> El lunes a cuarta hora se imparte {$datos->lunes->clase[3]->modulo}. La imparte {$datos->lunes->clase[3]->profe}.";
-echo "<br> El lunes a quinta hora se imparte {$datos->lunes->clase[4]->modulo}. La imparte {$datos->lunes->clase[4]->profe}.";
-echo "<br> El lunes a última hora se imparte {$datos->lunes->clase[5]->modulo}. La imparte {$datos->lunes->clase[5]->profe}.<br>";
-
-echo "<br> El martes a primera hora se imparte {$datos->martes->clase[0]->modulo}. La imparte {$datos->martes->clase[0]->profe}.";
-echo "<br> El martes a segunda hora se imparte {$datos->martes->clase[1]->modulo}. La imparte {$datos->martes->clase[1]->profe}.";
-echo "<br> El martes a tercera hora se imparte {$datos->martes->clase[2]->modulo}. La imparte {$datos->martes->clase[2]->profe}.";
-echo "<br> El martes a cuarta hora se imparte {$datos->martes->clase[3]->modulo}. La imparte {$datos->martes->clase[3]->profe}.";
-echo "<br> El martes a quinta hora se imparte {$datos->martes->clase[4]->modulo}. La imparte {$datos->martes->clase[4]->profe}.";
-echo "<br> El martes a última hora se imparte {$datos->martes->clase[5]->modulo}. La imparte {$datos->martes->clase[5]->profe}.<br>";
-
-echo "<br> El miercoles a primera hora se imparte {$datos->miercoles->clase[0]->modulo}. La imparte {$datos->miercoles->clase[0]->profe}.";
-echo "<br> El miercoles a segunda hora se imparte {$datos->miercoles->clase[1]->modulo}. La imparte {$datos->miercoles->clase[1]->profe}.";
-echo "<br> El miercoles a tercera hora se imparte {$datos->miercoles->clase[2]->modulo}. La imparte {$datos->miercoles->clase[2]->profe}.";
-echo "<br> El miercoles a cuarta hora se imparte {$datos->miercoles->clase[3]->modulo}. La imparte {$datos->miercoles->clase[3]->profe}.";
-echo "<br> El miercoles a quinta hora se imparte {$datos->miercoles->clase[4]->modulo}. La imparte {$datos->miercoles->clase[4]->profe}.";
-echo "<br> El miercoles a última hora se imparte {$datos->miercoles->clase[5]->modulo}. La imparte {$datos->miercoles->clase[5]->profe}.<br>";
-
-echo "<br> El jueves a primera hora se imparte {$datos->jueves->clase[0]->modulo}. La imparte {$datos->jueves->clase[0]->profe}.";
-echo "<br> El jueves a segunda hora se imparte {$datos->jueves->clase[1]->modulo}. La imparte {$datos->jueves->clase[1]->profe}.";
-echo "<br> El jueves a tercera hora se imparte {$datos->jueves->clase[2]->modulo}. La imparte {$datos->jueves->clase[2]->profe}.";
-echo "<br> El jueves a cuarta hora se imparte {$datos->jueves->clase[3]->modulo}. La imparte {$datos->jueves->clase[3]->profe}.";
-echo "<br> El jueves a quinta hora se imparte {$datos->jueves->clase[4]->modulo}. La imparte {$datos->jueves->clase[4]->profe}.";
-echo "<br> El jueves a última hora se imparte {$datos->jueves->clase[5]->modulo}. La imparte {$datos->jueves->clase[5]->profe}.<br>";
-
-echo "<br> El viernes a primera hora se imparte {$datos->viernes->clase[0]->modulo}. La imparte {$datos->viernes->clase[0]->profe}.";
-echo "<br> El viernes a segunda hora se imparte {$datos->viernes->clase[1]->modulo}. La imparte {$datos->viernes->clase[1]->profe}.";
-echo "<br> El viernes a tercera hora se imparte {$datos->viernes->clase[2]->modulo}. La imparte {$datos->viernes->clase[2]->profe}.";
-echo "<br> El viernes a cuarta hora se imparte {$datos->viernes->clase[3]->modulo}. La imparte {$datos->viernes->clase[3]->profe}.";
-echo "<br> El viernes a quinta hora se imparte {$datos->viernes->clase[4]->modulo}. La imparte {$datos->viernes->clase[4]->profe}.";
-echo "<br> El viernes a última hora se imparte {$datos->viernes->clase[5]->modulo}. La imparte {$datos->viernes->clase[5]->profe}.<br>";
-
-
-
-
-
+    dos($diaactual,$horaactual,$minutosactuales);
 ?>

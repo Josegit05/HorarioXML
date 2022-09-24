@@ -1,132 +1,105 @@
 <horario>
     <lunes>
-        <clase>
-            <modulo>EMR</modulo>
-            <profe>Maria Del Sol</profe>
-        </clase>
-        <clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
-		<clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
-		<clase>
-            <modulo>DEW</modulo>
-            <profe>Pilar</profe>
-        </clase>
-		<clase>
-            <modulo>DEW</modulo>
-            <profe>Pilar</profe>
-        </clase>
-		<clase>
-            <modulo>DEW</modulo>
-            <profe>Pilar</profe>
-        </clase>
+        <Primera-Hora>
+            <modulo>EMR-Maria Del Sol-Aula 201</modulo>
+        </Primera-Hora>
+        <Segunda-Hora>
+            <modulo>DSW-Sergio-Aula 201</modulo>
+        </Segunda-Hora>
+		<Tercera-Hora>
+            <modulo>DSW-Sergio-Aula 201</modulo>
+        </Tercera-Hora>
+		<Recreo>
+		
+		</Recreo>
+		<Cuarta-Hora>
+            <modulo>DEW-Maria Del Carmen-Aula 201</modulo>
+        </Cuarta-Hora>
+		<Quinta-Hora>
+            <modulo>DEW-Maria Del Carmen-Aula 201</modulo>
+        </Quinta-Hora>
+		<Sexta-Hora>
+			<modulo>DEW-Maria Del Carmen-Aula 201</modulo>
+        </Sexta-Hora>
     </lunes>
     <martes>
-        <clase>
-            <modulo>DPL</modulo>
-            <profe>Maria Antonia</profe>
-        </clase>
-		<clase>
-            <modulo>DPL</modulo>
-            <profe>Maria Antonia</profe>
-        </clase>
-		<clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
-		<clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
-		 <clase>
-            <modulo>DOR</modulo>
-            <profe>Ermis</profe>
-        </clase>
-		<clase>
-            <modulo>DOR</modulo>
-            <profe>Ermis</profe>
-        </clase>
+        <Primera-Hora>
+            <modulo>DPL-Maria Antonia-Aula 201</modulo>
+        </Primera-Hora>
+        <Segunda-Hora>
+            <modulo>DPL-Maria Antonia-Aula 201</modulo>
+        </Segunda-Hora>
+		<Tercera-Hora>
+            <modulo>DSW-Sergio-Aula 201</modulo>
+        </Tercera-Hora>
+		<Cuarta-Hora>
+            <modulo>DSW-Sergio-Aula 201</modulo>
+        </Cuarta-Hora>
+		<Quinta-Hora>
+            <modulo>DOR-Ermis-Aula 201</modulo>
+        </Quinta-Hora>
+		<Sexta-Hora>
+			<modulo>DOR-Ermis-Aula 201</modulo>
+        </Sexta-Hora>
     </martes>
 	<miercoles>
-        <clase>
-            <modulo>DEW</modulo>
-            <profe>Pilar</profe>
-        </clase>
-		<clase>
-            <modulo>DEW</modulo>
-            <profe>Pilar</profe>
-        </clase>
-		<clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
-		<clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
-		 <clase>
-            <modulo>DOR</modulo>
-            <profe>Ermis</profe>
-        </clase>
-		<clase>
-            <modulo>DOR</modulo>
-            <profe>Ermis</profe>
-        </clase>
+        <Primera-Hora>
+            <modulo>DEW-Maria Del Carmen-Aula 201</modulo>
+        </Primera-Hora>
+        <Segunda-Hora>
+            <modulo>DEW-Maria Del Carmen-Aula 201</modulo>
+        </Segunda-Hora>
+		<Tercera-Hora>
+            <modulo>DSW-Sergio-Aula 201</modulo>
+        </Tercera-Hora>
+		<Cuarta-Hora>
+            <modulo>DSW-Sergio-Aula 201</modulo>
+        </Cuarta-Hora>
+		<Quinta-Hora>
+            <modulo>DOR-Ermis-Aula 201</modulo>
+        </Quinta-Hora>
+		<Sexta-Hora>
+			<modulo>DOR-Ermis-Aula 201</modulo>
+        </Sexta-Hora>
     </miercoles>
 	<jueves>
-        <clase>
-            <modulo>DPL</modulo>
-            <profe>Maria Antonia</profe>
-        </clase>
-		<clase>
-            <modulo>DPL</modulo>
-            <profe>Maria Antonia</profe>
-        </clase>
-		<clase>
-            <modulo>DPL</modulo>
-            <profe>Maria Antonia</profe>
-        </clase>
-		<clase>
-            <modulo>DEW</modulo>
-            <profe>Pilar</profe>
-        </clase>
-		 <clase>
-            <modulo>DEW</modulo>
-            <profe>Pilar</profe>
-        </clase>
-		<clase>
-            <modulo>EMR</modulo>
-            <profe>Maria Del Sol</profe>
-        </clase>
+        <Primera-Hora>
+            <modulo>DPL-Maria Antonia-Aula 201</modulo>
+        </Primera-Hora>
+        <Segunda-Hora>
+            <modulo>DPL-Maria Antonia-Aula 201</modulo>
+        </Segunda-Hora>
+		<Tercera-Hora>
+            <modulo>DPL-Maria Antonia-Aula 201</modulo>
+        </Tercera-Hora>
+		<Cuarta-Hora>
+            <modulo>DEW-Maria Del Carmen-Aula 201</modulo>
+        </Cuarta-Hora>
+		<Quinta-Hora>
+            <modulo>DEW-Maria Del Carmen-Aula 201</modulo>
+        </Quinta-Hora>
+		<Sexta-Hora>
+			<modulo>EMR-Maria Del Sol-Aula 201</modulo>
+        </Sexta-Hora>
     </jueves>
 	<viernes>
-        <clase>
-            <modulo>DOR</modulo>
-            <profe>Ermis</profe>
-        </clase>
-		<clase>
-            <modulo>DOR</modulo>
-            <profe>Ermis</profe>
-        </clase>
-		<clase>
-            <modulo>DPL</modulo>
-            <profe>Maria Antonia</profe>
-        </clase>
-		<clase>
-			<modulo>EMR</modulo>
-            <profe>Maria Del Sol</profe>
-        </clase>
-		 <clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
-		<clase>
-            <modulo>DSW</modulo>
-            <profe>Sergio</profe>
-        </clase>
+        <Primera-Hora>
+            <modulo>DOR-Ermis-Aula 201</modulo>
+        </Primera-Hora>
+        <Segunda-Hora>
+            <modulo>DOR-Ermis-Aula 201</modulo>
+        </Segunda-Hora>
+		<Tercera-Hora>
+            <modulo>DPL-Maria Antonia-Aula 201</modulo>
+        </Tercera-Hora>
+		<Cuarta-Hora>
+            <modulo>EMR-Maria Del Sol-Aula 201</modulo>
+        </Cuarta-Hora>
+		<Quinta-Hora>
+            <modulo>DSW-Sergio-Aula 201</modulo>
+        </Quinta-Hora>
+		<Sexta-Hora>
+			<modulo>DSW-Sergio-Aula 201</modulo>
+        </Sexta-Hora>
     </viernes>
 </horario>
